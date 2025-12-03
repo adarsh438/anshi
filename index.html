@@ -78,13 +78,28 @@
 
         /* Letter Section */
         .letter-section {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            background: var(--secondary); /* Changed from white to secondary for contrast */
+            padding: 50px 40px; /* Increased top/bottom padding */
+            border-radius: 25px; /* Slightly more rounded */
+            box-shadow: 0 15px 40px rgba(255, 77, 109, 0.2); /* Enhanced shadow using accent color */
             margin-bottom: 50px;
             text-align: center;
+            border: 3px dashed var(--primary); /* Added dashed border for note feel */
+            transform: rotate(-1deg); /* Slight rotation for a physical note effect */
+            transition: transform 0.5s;
         }
+        
+        .letter-section:hover {
+            transform: rotate(0deg) scale(1.01); /* Straighten and slight lift on hover */
+        }
+        
+        .letter-section h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
 
         .letter-section p {
             font-size: 1.1rem;
